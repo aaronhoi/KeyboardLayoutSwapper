@@ -1,0 +1,195 @@
+$(document).ready(function () {
+    $('#swapButton').click(function () {
+        $('#origin').val(swapText($('#origin').val()));
+    }); 1
+    $('#swappingDir').on('change', function (e) { swappingDir = e.currentTarget.selectedOptions[0].value; console.log(swappingDir);});
+});
+var opt;
+function swapText(text) {
+    var swappedText = '';
+    for (var i = 0; i < text.length; i++) {
+        var char = text[i];
+        char = dict[swappingDir + '-' + char.toLowerCase()];
+        if (char == undefined) { char = text[i]; }
+
+        swappedText += char;
+
+    }
+    return swappedText;
+}
+
+var swappingDir = "he-en";
+
+const dict = {};
+dict["en-he-`"] = ";";
+dict["en-he-q"] = "/";
+dict["en-he-w"] = "'";
+dict["en-he-e"] = "ק";
+dict["en-he-r"] = "ר";
+dict["en-he-t"] = "א";
+dict["en-he-y"] = "ט";
+dict["en-he-u"] = "ו";
+dict["en-he-i"] = "ן";
+dict["en-he-o"] = "ם";
+dict["en-he-p"] = "פ";
+dict["en-he-["] = "]";
+dict["en-he-]"] = "[";
+dict["en-he-a"] = "ש";
+dict["en-he-s"] = "ד";
+dict["en-he-d"] = "ג";
+dict["en-he-f"] = "כ";
+dict["en-he-g"] = "ע";
+dict["en-he-h"] = "י";
+dict["en-he-j"] = "ח";
+dict["en-he-k"] = "ל";
+dict["en-he-l"] = "ך";
+dict["en-he-;"] = "ף";
+dict["en-he-'"] = ",";
+dict["en-he-z"] = "ז";
+dict["en-he-x"] = "ס";
+dict["en-he-c"] = "ב";
+dict["en-he-v"] = "ה";
+dict["en-he-b"] = "נ";
+dict["en-he-n"] = "מ";
+dict["en-he-m"] = "צ";
+dict["en-he-,"] = "ת";
+dict["en-he-."] = "ץ";
+dict["en-he-/"] = ".";
+
+
+dict["he-en-;"] = "`";
+dict["he-en-/"] = "q";
+dict["he-en-'"] = "w";
+dict["he-en-ק"] = "e";
+dict["he-en-ר"] = "r";
+dict["he-en-א"] = "t";
+dict["he-en-ט"] = "y";
+dict["he-en-ו"] = "u";
+dict["he-en-ן"] = "i";
+dict["he-en-ם"] = "o";
+dict["he-en-פ"] = "p";
+dict["he-en-]"] = "[";
+dict["he-en-["] = "]";
+dict["he-en-ש"] = "a";
+dict["he-en-ד"] = "s";
+dict["he-en-ג"] = "d";
+dict["he-en-כ"] = "f";
+dict["he-en-ע"] = "g";
+dict["he-en-י"] = "h";
+dict["he-en-ח"] = "j";
+dict["he-en-ל"] = "k";
+dict["he-en-ך"] = "l";
+dict["he-en-ף"] = ";";
+dict["he-en-,"] = "'";
+dict["he-en-ז"] = "z";
+dict["he-en-ס"] = "x";
+dict["he-en-ב"] = "c";
+dict["he-en-ה"] = "v";
+dict["he-en-נ"] = "b";
+dict["he-en-מ"] = "n";
+dict["he-en-צ"] = "m";
+dict["he-en-ת"] = ",";
+dict["he-en-ץ"] = ".";
+dict["he-en-."] = "/";
+
+
+dict["he-ru-;"] = "ё";
+dict["he-ru-/"] = "й";
+dict["he-ru-'"] = "ц";
+dict["he-ru-ק"] = "у";
+dict["he-ru-ר"] = "к";
+dict["he-ru-א"] = "е";
+dict["he-ru-ט"] = "н";
+dict["he-ru-ו"] = "г";
+dict["he-ru-ן"] = "ш";
+dict["he-ru-ם"] = "щ";
+dict["he-ru-פ"] = "з";
+dict["he-ru-]"] = "х";
+dict["he-ru-["] = "ъ";
+dict["he-ru-ש"] = "ф";
+dict["he-ru-ד"] = "ы";
+dict["he-ru-ג"] = "в";
+dict["he-ru-כ"] = "а";
+dict["he-ru-ע"] = "п";
+dict["he-ru-י"] = "р";
+dict["he-ru-ח"] = "о";
+dict["he-ru-ל"] = "л";
+dict["he-ru-ך"] = "д";
+dict["he-ru-ף"] = "ж";
+dict["he-ru-,"] = "э";
+dict["he-ru-ז"] = "я";
+dict["he-ru-ס"] = "ч";
+dict["he-ru-ב"] = "с";
+dict["he-ru-ה"] = "м";
+dict["he-ru-נ"] = "и";
+dict["he-ru-מ"] = "т";
+dict["he-ru-צ"] = "ь";
+dict["he-ru-ת"] = "б";
+dict["he-ru-ץ"] = "ю";
+dict["he-ru-."] = ".";
+dict["he-ru-q"] = "й";
+dict["he-ru-w"] = "ц";
+dict["he-ru-e"] = "у";
+dict["he-ru-r"] = "к";
+dict["he-ru-t"] = "е";
+dict["he-ru-y"] = "н";
+dict["he-ru-u"] = "г";
+dict["he-ru-i"] = "ш";
+dict["he-ru-o"] = "щ";
+dict["he-ru-p"] = "з";
+dict["he-ru-["] = "х";
+dict["he-ru-]"] = "ъ";
+dict["he-ru-a"] = "ф";
+dict["he-ru-s"] = "ы";
+dict["he-ru-d"] = "в";
+dict["he-ru-f"] = "а";
+dict["he-ru-g"] = "п";
+dict["he-ru-h"] = "р";
+dict["he-ru-j"] = "о";
+dict["he-ru-k"] = "л";
+dict["he-ru-l"] = "д";
+dict["he-ru-;"] = "ж";
+dict["he-ru-'"] = "э";
+dict["he-ru-z"] = "я";
+dict["he-ru-x"] = "ч";
+dict["he-ru-c"] = "с";
+dict["he-ru-v"] = "м";
+dict["he-ru-b"] = "и";
+dict["he-ru-n"] = "т";
+dict["he-ru-m"] = "ь";
+
+
+dict["ru-he-ё"] = ";";
+dict["ru-he-й"] = "/";
+dict["ru-he-ц"] = "'";
+dict["ru-he-у"] = "ק";
+dict["ru-he-к"] = "ר";
+dict["ru-he-е"] = "א";
+dict["ru-he-н"] = "ט";
+dict["ru-he-г"] = "ו";
+dict["ru-he-ш"] = "ן";
+dict["ru-he-щ"] = "ם";
+dict["ru-he-з"] = "פ";
+dict["ru-he-х"] = "]";
+dict["ru-he-ъ"] = "[";
+dict["ru-he-ф"] = "ש";
+dict["ru-he-ы"] = "ד";
+dict["ru-he-в"] = "ג";
+dict["ru-he-а"] = "כ";
+dict["ru-he-п"] = "ע";
+dict["ru-he-р"] = "י";
+dict["ru-he-о"] = "ח";
+dict["ru-he-л"] = "ל";
+dict["ru-he-д"] = "ך";
+dict["ru-he-ж"] = "ף";
+dict["ru-he-э"] = ",";
+dict["ru-he-я"] = "ז";
+dict["ru-he-ч"] = "ס";
+dict["ru-he-с"] = "ב";
+dict["ru-he-м"] = "ה";
+dict["ru-he-и"] = "נ";
+dict["ru-he-т"] = "מ";
+dict["ru-he-ь"] = "צ";
+dict["ru-he-б"] = "ת";
+dict["ru-he-ю"] = "ץ";
+dict["ru-he-."] = ".";

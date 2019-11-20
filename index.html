@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <title>Hebrew Swapper</title>
+</head>
+<body>
+    <div class="parent">
+        <textarea id="origin" rows="10"></textarea>
+        <div class="controls">
+            <select id="swappingDir">
+                <optgroup>
+                    <option value="he-en">Hebrew → English</option>
+                    <option value="en-he">English → Hebrew</option>
+                </optgroup>
+                <optgroup>
+                    <option value="he-ru">Hebrew → Russian</option>
+                    <option value="ru-he">Russian → Hebrew</option>
+                </optgroup>
+            </select>
+            <input type="button" id="swapButton" value="Swap Layout"></button>
+        </div>
+    </div>
+</body>
+</html>
