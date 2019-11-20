@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('#swapButton').click(function () {
         $('#origin').val(swapText($('#origin').val()));
     }); 1
-    $('#swappingDir').on('change', function (e) { swappingDir = e.currentTarget.selectedOptions[0].value; console.log(swappingDir);});
+    $('#swappingDir').on('change', function (e) { swappingDir = e.currentTarget.selectedOptions[0].value; console.log(swappingDir); });
 });
 var opt;
 function swapText(text) {
