@@ -1,11 +1,10 @@
 $(document).ready(function () {
     $('#swapButton').click(function () {
-        $('#origin').val(swapText($('#origin').val()));
-    }); 1
-    $('#swappingDir').on('change', function (e) { swappingDir = e.currentTarget.selectedOptions[0].value; console.log(swappingDir); });
+        $('#origin').val(swapText($('#origin').val(), $('#swappingDir').val()));
+    });
 });
-var opt;
-function swapText(text) {
+
+function swapText(text, swappingDir) {
     var swappedText = '';
     for (var i = 0; i < text.length; i++) {
         var char = text[i];
@@ -17,8 +16,6 @@ function swapText(text) {
     }
     return swappedText;
 }
-
-var swappingDir = "he-en";
 
 const dict = {};
 dict["en-he-`"] = ";";
